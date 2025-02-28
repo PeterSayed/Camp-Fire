@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Swiper from CDN -->
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <title>Camp Fire</title>
+</head>
+<body>
+
+<!-- Navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-light px-lg-3 py-lg-2 shadow-sm sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand me-5"><img src="images/33.png" alt=""></a>
+      <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link active me-2 text-light" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-2 text-light" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-2 text-light" href="#OUR CAMP">Camp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-2 text-light" href="#Contsct Us">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="d-flex">
+          <button type="button" class="btn btn-outline-light shadow-none me-lg-3 me-2 " data-bs-toggle="modal" data-bs-target="#loginModal">
+            Login
+          </button>
+          <button type="button" class="btn btn-outline-light shadow-none " data-bs-toggle="modal" data-bs-target="#RegisterModal">
+            Register
+          </button>
+
+
+        </div>
+      </div>
+    </div>
+  </nav>
+<!-- Navbar  -->
+
+<!-- login form -->
+  <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center">
+              <i class="bi bi-person-circle fs-3 me-2"></i> User login
+          </h5>
+            <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input type="email" class="form-control shadow-none">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control shadow-none">
+            </div>
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <button type="submit" class="btn btn-dark shadow-none">LOGIN</button>
+                <a href="" class="text-secondary text-decoration-none"> Forget Password?</a>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<!-- login form -->
+
+<!-- Registration form -->
+  <div class="modal fade" id="RegisterModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center">
+              <i class="bi bi-person-lines-fill fs-3 me-2"></i>
+                User Registration
+          </h5>
+            <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <span class="badge bg-light text-dark mb-3 text-wrap lh-base">
+              Note: Your details must match your ID
+            </span>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6 ps-0 mb-3">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control shadow-none">
+                </div>
+                <div class="col-md-6 ps-0 mb-3">
+                  <label class="form-label"> last Name</label>
+                  <input type="text" class="form-control shadow-none">
+                </div>
+                <div class="col-md-6 ps-0 mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control shadow-none">
+                </div>
+                <div class="col-md-6 ps-0 mb-3">
+                  <label class="form-label">Phone Number</label>
+                  <input type="number" class="form-control shadow-none">
+                </div>
+                <div class="col-md-6 ps-0 mb-3">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control shadow-none">
+                </div>
+                <div class="col-md-6 ps-0 mb-3">
+                  <label class="form-label">Conform Password</label>
+                  <input type="password" class="form-control shadow-none">
+                </div>
+                <!-- <div class="col-md-6 ps-0 mb-3">
+                  <label class="form-label">Pincode</label>
+                  <input type="number" class="form-control shadow-none">
+                </div> -->
+                <div class="col-md-6 ps-0 mb-3">
+                  <label class="form-label">Date Of birth</label>
+                  <input type="date" class="form-control shadow-none">
+                </div>
+                <div class="col-md-12 p-0 mb-3">
+                  <label class="form-label">Address</label>
+                  <textarea class="form-control shadow-none" rows="1"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="text-center my-1">
+              <button type="submit" class="btn btn-dark shadow-none">REGISTER</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<!-- Registration form -->
+
+  <!-- Carousel javascript -->
+<div class="container-fluid">
+<!-- Swiper -->
+<div class="swiper Swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="images/banner-1.png"/>
+    </div>
+    <div class="swiper-slide">
+      <img src="images/banner-2.png" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/banner-1.png" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/banner-2.png" />
+    </div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+</div>
+  <!-- Carousel javascript -->
+
+<!-- Check availability form  -->
+<div class="container availability-form ">
+  <div class="row">
+    <div class="col-lg-12 bg-white shadow p-4 rounded">
+      <h5 class="mb-4">Book Your <span>Camp</span></h5>
+      <form>
+        <div class="row align-items-end">
+          <div class="col-lg-3 mb-3">
+            <label class="form-label" style="font-weight: 500;" >Check-in</label>
+            <input type="date" class="form-control shadow-none">
+          </div>
+          <div class="col-lg-3 mb-3">
+            <label class="form-label" style="font-weight: 500;" >Check-Out</label>
+            <input type="date" class="form-control shadow-none">
+          </div>
+          <div class="col-lg-3 mb-3">
+            <label class="form-label" style="font-weight: 500;">Adult</label>
+            <select class="form-select shadow-none">
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-lg-2 mb-3">
+            <label class="form-label" style="font-weight: 500;">Children</label>
+            <select class="form-select shadow-none">
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+            <div class="col-lg-1 mb-3 mt-2">
+              <button type="submit" class="btn text-white shadow-none custom-bg">Submit</button>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Check availability form  -->
+
+<!-- Our Camp -->
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">OUR CAMP</h2>
+
+<div class="container">
+  <div class="row">
+    <!-- Card one -->
+    <div class="col-lg-4 col-md-6 my-3">
+      <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+        <img src="images/1.png" class="card-img-top" alt="card-img-top">
+        <div class="card-body">
+          <h5>اسم المكان يانجم</h5>
+          <h6 class="mb-4">EGP 1000 per night</h6>
+            <div class="Accommodation mb-4">
+              <h6 class="mb-1">Accommodation Type</h6>
+              <span class="badge bg-light text-dark text-wrap ">
+                Private Tent 
+              </span>
+              <span class="badge bg-light text-dark text-wrap ">
+                Wooden Cabin
+              </span>
+              <span class="badge bg-light text-dark text-wrap ">
+                Shared Lodge
+              </span>
+            </div>
+              <div class="Available-Services mb-4">
+                <h6 class="mb-1">Available Services</h6>
+                <span class="badge bg-light text-dark text-wrap ">
+                  On-site Restaurant 
+                </span>
+                <span class="badge bg-light text-dark text-wrap ">
+                  BBQ Area
+                </span>
+                <span class="badge bg-light text-dark text-wrap ">
+                  Free Wi-Fi
+                </span>
+              </div>
+              <div class="rating mb-4">
+                <h6 class="mb-1">Rating</h6>
+                <span class="badge rounded-pill bg-light">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </span>
+              
+              </div>
+              <div class="d-flex">
+                <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card Two -->
+    <div class="col-lg-4 col-md-6 my-3">
+      <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+        <img src="images/1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>اسم المكان يانجم</h5>
+          <h6 class="mb-4">EGP 1000 per night</h6>
+            <div class="Accommodation mb-4">
+              <h6 class="mb-1">Accommodation Type</h6>
+              <span class="badge bg-light text-dark text-wrap ">
+                Private Tent 
+              </span>
+              <span class="badge bg-light text-dark text-wrap ">
+                Wooden Cabin
+              </span>
+              <span class="badge bg-light text-dark text-wrap ">
+                Shared Lodge
+              </span>
+            </div>
+              <div class="Available-Services mb-4">
+                <h6 class="mb-1">Available Services</h6>
+                <span class="badge bg-light text-dark text-wrap ">
+                  On-site Restaurant 
+                </span>
+                <span class="badge bg-light text-dark text-wrap ">
+                  BBQ Area
+                </span>
+                <span class="badge bg-light text-dark text-wrap ">
+                  Free Wi-Fi
+                </span>
+              </div>
+              <div class="rating mb-4">
+                <h6 class="mb-1">Rating</h6>
+                <span class="badge rounded-pill bg-light">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </span>
+              
+              </div>
+              <div class="d-flex">
+                <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card There -->
+    <div class="col-lg-4 col-md-6 my-3">
+      <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+        <img src="images/1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>اسم المكان يانجم</h5>
+          <h6 class="mb-4">EGP 1000 per night</h6>
+            <div class="Accommodation mb-4">
+              <h6 class="mb-1">Accommodation Type</h6>
+              <span class="badge bg-light text-dark text-wrap ">
+                Private Tent 
+              </span>
+              <span class="badge bg-light text-dark text-wrap ">
+                Wooden Cabin
+              </span>
+              <span class="badge bg-light text-dark text-wrap ">
+                Shared Lodge
+              </span>
+            </div>
+              <div class="Available-Services mb-4">
+                <h6 class="mb-1">Available Services</h6>
+                <span class="badge bg-light text-dark text-wrap ">
+                  On-site Restaurant 
+                </span>
+                <span class="badge bg-light text-dark text-wrap ">
+                  BBQ Area
+                </span>
+                <span class="badge bg-light text-dark text-wrap ">
+                  Free Wi-Fi
+                </span>
+              </div>
+              <div class="rating mb-4">
+                <h6 class="mb-1">Rating</h6>
+                <span class="badge rounded-pill bg-light">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </span>
+              
+              </div>
+              <div class="d-flex ">
+                <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- More Camp -->
+    <div class="col-lg-12 text-center mt-5">
+      <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Camp >>></a>
+    </div>
+    <!-- More Camp -->
+  </div>
+</div>
+<!-- Our Camp -->
+
+<!-- AMENITIES -->
+<h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">OUR AMENITIES</h2>
+
+<div class="container">
+<div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+  <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="images/wifi.svg" width="90px">
+    <h5 class="mt-3">Wifi</h5>
+  </div>
+  <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="images/car-front.svg" width="90px">
+    <h5 class="mt-3">Vehicles</h5>
+  </div>
+  <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="images/house-door.svg" width="90px">
+    <h5 class="mt-3">Camping</h5>
+  </div>
+  <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="images/globe.svg" width="90px">
+    <h5 class="mt-3">Safari</h5>
+  </div>
+  <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="images/cup-straw.svg" width="90px">
+    <h5 class="mt-3">Food </h5>
+  </div>
+  <div class="col-lg-12 text-center mt-5">
+    <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More AMENITIES >>></a>
+  </div>
+</div>
+</div>
+<!-- AMENITIES -->
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br>
+<br><br><br><br>
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
