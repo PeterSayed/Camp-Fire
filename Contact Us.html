@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <title>Contact Us</title>
+
+      <!-- Style -->
+    <style>
+        body {
+        font-family: 'poppins', sans-serif;
+        background-color: #a9a18f;
+      }
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        
+      }
+      .contact-section {
+        width: 80%;
+        margin: 20px auto;
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      
+      h2 {
+        margin-bottom: 20px;
+      }
+      
+      .contact-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      
+      .left-side {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .left-side, .contact-form,
+      .map-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      
+      
+      .contact-info h3, .contact-form h3 {
+        margin-bottom: 15px;
+      }
+      
+      .contact-form {
+        width: 48%;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      button.Send {
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      button.Send:hover {
+        background: #0056b3;
+      }
+      
+      
+      .map-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .map-container iframe {
+        width: 200px;  
+        height: auto;   
+        border-radius: 8px;
+        margin-top: 10px;
+        
+      }
+      
+      
+      @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .left-side, .contact-form, .map-container {
+            width: 100%;
+        }
+      }
+      
+    </style>
+      <!-- Style -->
+</head>
+<body>
+  <!-- Contact Us -->
+  <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Contact Us</h2>
+
+<section class="contact-section">
+
+  <div class="contact-container">
+
+      <div class="left-side">
+        <h2>Get in Touch</h2>
+          <p><strong>Phone</strong> <br> +1 (123) 456-7890</p>
+          <p><strong>Email</strong> <br> support@ecommerce.com</p>
+          <p><strong>Address</strong> <br> 123  Street, Suite 456, New York, NY 10001</p>
+      </div>
+
+      <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form>
+              <input type="text" placeholder="Name" required>
+              <input type="email" placeholder="Email" required>
+              <textarea placeholder="Message" required></textarea>
+              <button class="Send" type="submit">Submit</button>
+          </form>
+      </div>
+  </div>
+
+  <div class="map-container">
+      <h3>Our Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13803.2802662017!2d31.34031816351076!3d30.12796185712861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815b60a8beef1%3A0x50ead0a80b09aff2!2z2LnZitmGINi02YXYs9iMINi52YrZhiDYtNmF2LMg2KfZhNi02LHZgtmK2KnYjCDZgtiz2YUg2LnZitmGINi02YXYs9iMINmF2K3Yp9mB2LjYqSDYp9mE2YLYp9mH2LHYqeKArCA0NTQzMDcw!5e0!3m2!1sar!2seg!4v1741017043243!5m2!1sar!2seg"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  
+</section>
+<!-- Contact Us -->
+
+
+
+
+
+
+
+<!-- Footer -->
+<div class="container-fluid bg- mt-5">
+  <div class="row">
+    <div class="col-lg-4 p-4">
+      <a class="navbar-brand me-5 mb-2"><img src="images/logo.png"></a>
+      <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla consectetur quos voluptate recusandae veritatis beatae, officiis incidunt!</p>
+      
+    </div>
+    <div class="col-lg-4 p-4">
+      <h5 class="mb-3">Links</h5>
+      <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a> <br>
+      <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">About</a> <br>
+      <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">camp</a> <br>
+      <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Contact Us</a> <br>
+    </div>
+    <div class="col-lg-4 p-4">
+      <h5 class="mb-3">Follow Us</h5>
+      <a href="#" class="d-inline-block text-dark text-decoration-none mb-2"><i class="bi bi-twitter me-1" ></i> Twitter</a> <br>
+      <a href="#" class="d-inline-block text-dark text-decoration-none mb-2"><i class="bi bi-facebook me-1" ></i> facebook</a> <br>
+      <a href="#" class="d-inline-block text-dark text-decoration-none mb-2"><i class="bi bi-instagram me-1" ></i> instagram</a> <br>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<h6 class="text-center bg-dark text-white p-3 m-0">Developed by  KhalihA Ala Allah team</h6>
+</body>
+</html>
