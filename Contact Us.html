@@ -4,124 +4,152 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+<!-- Swiper from CDN -->
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <title>Contact Us</title>
-
-      <!-- Style -->
-    <style>
-        body {
-        font-family: 'poppins', sans-serif;
-        background-color: #a9a18f;
-      }
-      *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        
-      }
-      .contact-section {
-        width: 80%;
-        margin: 20px auto;
-        background: white;
-        border-radius: 8px;
-        padding: 20px;
-        background: white;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-      
-      h2 {
-        margin-bottom: 20px;
-      }
-      
-      .contact-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      
-      .left-side {
-        width: 48%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-      
-      .left-side, .contact-form,
-      .map-container {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
-      
-      
-      
-      .contact-info h3, .contact-form h3 {
-        margin-bottom: 15px;
-      }
-      
-      .contact-form {
-        width: 48%;
-      }
-      
-      form {
-        display: flex;
-        flex-direction: column;
-      }
-      
-      input, textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      
-      button.Send {
-        padding: 10px;
-        background: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      
-      button.Send:hover {
-        background: #0056b3;
-      }
-      
-      
-      .map-container {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        margin-top: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
-      
-      .map-container iframe {
-        width: 200px;  
-        height: auto;   
-        border-radius: 8px;
-        margin-top: 10px;
-        
-      }
-      
-      
-      @media (max-width: 768px) {
-        .contact-container {
-            flex-direction: column;
-            align-items: center;
-        }
-        .left-side, .contact-form, .map-container {
-            width: 100%;
-        }
-      }
-      
-    </style>
-      <!-- Style -->
 </head>
 <body>
+  <!-- Navbar  -->
+<nav class="navbar navbar-expand-lg navbar-light px-lg-2 py-lg-2 shadow-sm sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand me-5"><img src="images/logo.png" alt=""></a>
+    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active me-2 text-light" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2 text-light" href="#About">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2 active text-light" href="camp.html">Camp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2 text-light" href="Contact Us.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <div class="d-flex">
+        <button type="button" class="btn btn-outline-light shadow-none me-lg-3 me-2 " data-bs-toggle="modal" data-bs-target="#loginModal">
+          Login
+        </button>
+        <button type="button" class="btn btn-outline-light shadow-none " data-bs-toggle="modal" data-bs-target="#RegisterModal">
+          Register
+        </button>
+
+
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Navbar  -->
+<!-- login form -->
+<div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h5 class="modal-title d-flex align-items-center">
+            <i class="bi bi-person-circle fs-3 me-2"></i> User login
+        </h5>
+          <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control shadow-none">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control shadow-none">
+          </div>
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <button type="submit" class="btn btn-dark shadow-none">LOGIN</button>
+              <a href="" class="text-secondary text-decoration-none"> Forget Password?</a>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- login form -->
+
+<!-- Registration form -->
+<div class="modal fade" id="RegisterModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg ">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h5 class="modal-title d-flex align-items-center">
+            <i class="bi bi-person-lines-fill fs-3 me-2"></i>
+              User Registration
+        </h5>
+          <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="badge bg-light text-dark mb-3 text-wrap lh-base">
+            Note: Your details must match your ID
+          </span>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label"> last Name</label>
+                <input type="text" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="number" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Conform Password</label>
+                <input type="password" class="form-control shadow-none">
+              </div>
+              <!-- <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Pincode</label>
+                <input type="number" class="form-control shadow-none">
+              </div> -->
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Date Of birth</label>
+                <input type="date" class="form-control shadow-none">
+              </div>
+              <div class="col-md-12 p-0 mb-3">
+                <label class="form-label">Address</label>
+                <textarea class="form-control shadow-none" rows="1"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="text-center my-1">
+            <button type="submit" class="btn btn-dark shadow-none">REGISTER</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Registration form -->
+
   <!-- Contact Us -->
   <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Contact Us</h2>
 
@@ -149,18 +177,11 @@
 
   <div class="map-container">
       <h3>Our Location</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13803.2802662017!2d31.34031816351076!3d30.12796185712861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815b60a8beef1%3A0x50ead0a80b09aff2!2z2LnZitmGINi02YXYs9iMINi52YrZhiDYtNmF2LMg2KfZhNi02LHZgtmK2KnYjCDZgtiz2YUg2LnZitmGINi02YXYs9iMINmF2K3Yp9mB2LjYqSDYp9mE2YLYp9mH2LHYqeKArCA0NTQzMDcw!5e0!3m2!1sar!2seg!4v1741017043243!5m2!1sar!2seg"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13803.2802662017!2d31.34031816351076!3d30.12796185712861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815b60a8beef1%3A0x50ead0a80b09aff2!2z2LnZitmGINi02YXYs9iMINi52YrZhiDYtNmF2LMg2KfZhNi02LHZgtmK2KnYjCDZgtiz2YUg2LnZitmGINi02YXYs9iMINmF2K3Yp9mB2LjYqSDYp9mE2YLYp9mH2LHYqeKArCA0NTQzMDcw!5e0!3m2!1sar!2seg!4v1741017043243!5m2!1sar!2seg"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div> -->
   
 </section>
 <!-- Contact Us -->
-
-
-
-
-
-
-
 <!-- Footer -->
 <div class="container-fluid bg- mt-5">
   <div class="row">
@@ -186,5 +207,11 @@
 </div>
 <!-- Footer -->
 <h6 class="text-center bg-dark text-white p-3 m-0">Developed by  KhalihA Ala Allah team</h6>
+<script src="js/popper.min.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- swiper js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

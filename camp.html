@@ -6,78 +6,149 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
 <!-- Swiper from CDN -->
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <title>CAMP</title>
 
-  <style>
-
-body {
-  font-family: 'poppins', sans-serif;
-  background-color: #a9a18f;
-  overflow-x: hidden;
-}
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  
-}
-
-
-
-
-
-.availability-form {
-  margin-top: -50px;
-  z-index: 2;
-  position: relative;
-}
-
-.container-fluid {
-  padding: 0;
-  margin: 0;
-}
-
-.container-fluid .navbar-brand img {
-  margin-left: 30px;
-}
-
-
-.swiper-slide img {
-  width: 100%;
-  height: 100vh;
-}
-
-.custom-bg{
-  background-color: #30261d;
-  border: 1px solid #30261d;
-}
-.custom-bg:hover{
-  background-color: #a9a18f;
-}
-
-.container span {
-  color: #a9a18f;
-}
-
-
-
-.swiper-testimonials
-.profile img {
-  height: auto;
-  max-height: 25px;
-  object-fit: contain;
-  width: 30px;
-}
-
-
-  </style>
 </head>
 
 <body>
+<!-- Navbar  -->
+<nav class="navbar navbar-expand-lg navbar-light px-lg-2 py-lg-2 shadow-sm sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand me-5"><img src="images/logo.png" alt=""></a>
+    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active me-2 text-light" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2 text-light" href="#About">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2 active text-light" href="camp.html">Camp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2 text-light" href="Contact Us.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <div class="d-flex">
+        <button type="button" class="btn btn-outline-light shadow-none me-lg-3 me-2 " data-bs-toggle="modal" data-bs-target="#loginModal">
+          Login
+        </button>
+        <button type="button" class="btn btn-outline-light shadow-none " data-bs-toggle="modal" data-bs-target="#RegisterModal">
+          Register
+        </button>
+
+
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Navbar  -->
+<!-- login form -->
+<div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h5 class="modal-title d-flex align-items-center">
+            <i class="bi bi-person-circle fs-3 me-2"></i> User login
+        </h5>
+          <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control shadow-none">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control shadow-none">
+          </div>
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <button type="submit" class="btn btn-dark shadow-none">LOGIN</button>
+              <a href="" class="text-secondary text-decoration-none"> Forget Password?</a>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- login form -->
+
+<!-- Registration form -->
+<div class="modal fade" id="RegisterModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg ">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h5 class="modal-title d-flex align-items-center">
+            <i class="bi bi-person-lines-fill fs-3 me-2"></i>
+              User Registration
+        </h5>
+          <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="badge bg-light text-dark mb-3 text-wrap lh-base">
+            Note: Your details must match your ID
+          </span>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label"> last Name</label>
+                <input type="text" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="number" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control shadow-none">
+              </div>
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Conform Password</label>
+                <input type="password" class="form-control shadow-none">
+              </div>
+              <!-- <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Pincode</label>
+                <input type="number" class="form-control shadow-none">
+              </div> -->
+              <div class="col-md-6 ps-0 mb-3">
+                <label class="form-label">Date Of birth</label>
+                <input type="date" class="form-control shadow-none">
+              </div>
+              <div class="col-md-12 p-0 mb-3">
+                <label class="form-label">Address</label>
+                <textarea class="form-control shadow-none" rows="1"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="text-center my-1">
+            <button type="submit" class="btn btn-dark shadow-none">REGISTER</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Registration form -->
   <!-- Our Camp -->
 <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">OUR CAMP</h2>
 
@@ -252,6 +323,5 @@ body {
 <!-- swiper js -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
-
 </body>
 </html>

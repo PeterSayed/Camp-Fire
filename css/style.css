@@ -4,6 +4,7 @@ body {
   background-color: #b1dbc7;
   overflow-x: hidden;
 }
+
 *{
   padding: 0;
   margin: 0;
@@ -41,8 +42,8 @@ a:hover::after {
   width: 100%;
 }
 
-
-.navbar-brand::after {
+.navbar-brand,
+.btn::after {
   content: none !important;
 } 
 
@@ -88,8 +89,6 @@ a:hover::after {
 .container span {
   color: #a9a18f;
 }
-
-
 
 .swiper-testimonials
 .profile img {
